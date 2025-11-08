@@ -3,403 +3,350 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compassionate Connections Counselling | Professional Therapy Services</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Serenity Therapy Center</title>
     <style>
+        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
-        :root {
-            --primary: #4A7B9D;
-            --secondary: #3A6B8A;
-            --accent: #F4A261;
-            --dark: #2A3D45;
-            --light: #F8F9FA;
-            --neutral: #E9ECEF;
-        }
-
+        
         body {
-            background-color: var(--light);
-            color: var(--dark);
             line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
         }
-
+        
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        /* Header & Navigation */
+        
+        /* Header styles */
         header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
+            background: linear-gradient(135deg, #4a6fa5 0%, #2c4d7a 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-
-        nav {
+        
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
         }
-
+        
         .logo {
             font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
+            font-weight: bold;
         }
-
-        .nav-links {
+        
+        nav ul {
             display: flex;
             list-style: none;
         }
-
-        .nav-links li {
-            margin-left: 30px;
+        
+        nav ul li {
+            margin-left: 2rem;
         }
-
-        .nav-links a {
+        
+        nav ul li a {
+            color: white;
             text-decoration: none;
-            color: var(--dark);
             font-weight: 500;
-            transition: color 0.3s;
+            transition: all 0.3s ease;
         }
-
-        .nav-links a:hover {
-            color: var(--primary);
+        
+        nav ul li a:hover {
+            color: #ffcc00;
         }
-
-        /* Hero Section */
+        
+        /* Hero section */
         .hero {
-            padding: 150px 0 100px;
+            background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 70vh;
             display: flex;
             align-items: center;
-            gap: 50px;
-        }
-
-        .hero-content {
-            flex: 1;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            color: #666;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--primary);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: var(--secondary);
-            transform: translateY(-3px);
-        }
-
-        .btn-accent {
-            background-color: var(--accent);
-        }
-
-        .btn-accent:hover {
-            background-color: #e68a4d;
-        }
-
-        .hero-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            height: 400px;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .hero-image:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Section Styling */
-        section {
-            padding: 100px 0;
-        }
-
-        .section-title {
             text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 15px;
-        }
-
-        .section-title p {
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* About Section */
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            height: 400px;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
             color: white;
-            font-size: 1.2rem;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Services Section */
-        .services-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-            text-align: center;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-card i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            margin-bottom: 15px;
-        }
-
-        /* Approach Section */
-        .approach-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .approach-item {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             position: relative;
-            height: 250px;
-            background: linear-gradient(45deg, var(--secondary), var(--primary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
         }
-
-        .approach-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .approach-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .approach-overlay {
+        
+        .hero::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(74, 123, 157, 0.9);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.5s;
-            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #ffcc00;
+            color: #333;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin: 0.5rem;
+        }
+        
+        .btn:hover {
+            background: #ffdb4d;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Section styles */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
             text-align: center;
-            color: white;
+            margin-bottom: 3rem;
         }
-
-        .approach-item:hover .approach-overlay {
-            opacity: 1;
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #2c4d7a;
+            margin-bottom: 1rem;
         }
-
-        /* Contact Section */
-        .contact-container {
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* About section */
+        .about-content {
             display: flex;
-            gap: 50px;
+            align-items: center;
+            gap: 3rem;
         }
-
-        .contact-info {
+        
+        .about-text {
             flex: 1;
         }
-
-        .contact-form {
+        
+        .about-image {
             flex: 1;
-        }
-
-        .contact-card {
-            background: white;
-            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-
-        .contact-card i {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 15px;
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
         }
-
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Services section */
+        .services {
+            background-color: #f0f8ff;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: #4a6fa5;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        /* Contact section */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
         }
-
+        
         .form-group label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
             font-weight: 500;
         }
-
+        
         .form-control {
             width: 100%;
-            padding: 12px 15px;
+            padding: 0.8rem;
             border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 1rem;
         }
-
+        
         textarea.form-control {
-            height: 150px;
+            min-height: 150px;
             resize: vertical;
         }
-
+        
+        /* Button spacing fix */
+        .button-container {
+            margin: 2rem 0;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Image section */
+        .image-section {
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .image-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .image-caption {
+            margin-top: 1rem;
+            font-style: italic;
+            color: #666;
+        }
+        
         /* Footer */
         footer {
-            background: var(--dark);
+            background: #333;
             color: white;
-            padding: 50px 0 20px;
+            padding: 3rem 0;
+            text-align: center;
         }
-
+        
         .footer-content {
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 40px;
+            flex-direction: column;
+            align-items: center;
         }
-
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 15px;
-        }
-
+        
         .social-links {
             display: flex;
-            gap: 15px;
+            gap: 1rem;
+            margin: 1.5rem 0;
         }
-
+        
         .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
             color: white;
-            text-decoration: none;
-            transition: background 0.3s;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
         }
-
+        
         .social-links a:hover {
-            background: var(--primary);
+            color: #ffcc00;
         }
-
+        
         .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.9rem;
+            margin-top: 1rem;
             color: #aaa;
+            font-size: 0.9rem;
         }
-
-        /* Responsive Design */
+        
+        /* Responsive styles */
         @media (max-width: 768px) {
-            .hero, .about-content, .contact-container {
+            .header-content {
                 flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 1rem;
             }
             
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
             
-            .nav-links {
-                display: none;
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .button-container {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
@@ -407,14 +354,13 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
+        <div class="container header-content">
+            <div class="logo">Serenity Therapy</div>
             <nav>
-                <div class="logo">Compassionate Connections</div>
-                <ul class="nav-links">
+                <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#approach">Approach</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -423,39 +369,46 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Find Your Path to Healing and Growth</h1>
-                <p>At Compassionate Connections Counselling, we provide a safe, supportive environment to help you navigate life's challenges and discover your inner strength.</p>
+        <div class="container hero-content">
+            <h1>Find Your Inner Peace</h1>
+            <p>Professional therapy services to help you navigate life's challenges</p>
+            <div class="button-container">
                 <a href="#contact" class="btn">Schedule a Session</a>
-                <a href="#services" class="btn btn-accent" style="margin-left: 15px;">Our Services</a>
-            </div>
-            <div class="hero-image">
-                <!-- Fallback content if image doesn't load -->
-                <div>Image: Peaceful Therapy Environment</div>
+                <a href="#services" class="btn">Our Services</a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Our Practice</h2>
-                <p>Creating a safe space for healing and personal growth</p>
+                <h2>About Us</h2>
+                <p>Providing compassionate mental health care since 2010</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Welcome to Compassionate Connections</h3>
-                    <p>I'm Dr. Sarah Johnson, a licensed therapist with over 10 years of experience helping individuals and couples navigate life's challenges. My approach is rooted in empathy, respect, and the belief that every person has the capacity for growth and healing.</p>
-                    <p>I specialize in anxiety, depression, relationship issues, and trauma recovery. My practice combines evidence-based techniques with a personalized approach to meet your unique needs and goals.</p>
-                    <p>I believe that the therapeutic relationship is the foundation for meaningful change, and I'm committed to creating a non-judgmental space where you can explore your thoughts and feelings openly.</p>
-                    <a href="#contact" class="btn" style="margin-top: 20px;">Book a Consultation</a>
+                    <h3>Our Approach</h3>
+                    <p>At Serenity Therapy, we believe in a holistic approach to mental wellness. Our team of licensed therapists provides evidence-based treatments tailored to your unique needs and circumstances.</p>
+                    <p>We create a safe, non-judgmental space where you can explore your thoughts and feelings, develop coping strategies, and work toward meaningful change in your life.</p>
+                    <div class="button-container">
+                        <a href="#contact" class="btn">Get in Touch</a>
+                    </div>
                 </div>
                 <div class="about-image">
-                    <div>Image: Therapist Portrait</div>
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Therapist and client in session">
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Peaceful Environment Section -->
+    <section class="image-section">
+        <div class="container">
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Peaceful therapy environment">
+            </div>
+            <p class="image-caption">Our calming therapy space designed for your comfort and healing</p>
         </div>
     </section>
 
@@ -464,195 +417,67 @@
         <div class="container">
             <div class="section-title">
                 <h2>Our Services</h2>
-                <p>Professional therapy tailored to your unique needs</p>
+                <p>We offer a variety of therapeutic approaches to support your mental health journey</p>
             </div>
-            <div class="services-container">
+            <div class="services-grid">
                 <div class="service-card">
-                    <i class="fas fa-user-friends"></i>
+                    <div class="service-icon">🧠</div>
                     <h3>Individual Therapy</h3>
-                    <p>One-on-one sessions focused on your personal growth, healing, and developing coping strategies for life's challenges.</p>
+                    <p>One-on-one sessions tailored to your specific needs, goals, and challenges.</p>
                 </div>
                 <div class="service-card">
-                    <i class="fas fa-heart"></i>
-                    <h3>Couples Counseling</h3>
-                    <p>Strengthen your relationship through improved communication, conflict resolution, and rebuilding trust and intimacy.</p>
+                    <div class="service-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family Counseling</h3>
+                    <p>Improve communication and resolve conflicts within your family system.</p>
                 </div>
                 <div class="service-card">
-                    <i class="fas fa-seedling"></i>
-                    <h3>Anxiety & Depression</h3>
-                    <p>Evidence-based approaches to manage symptoms, develop resilience, and restore balance to your life.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Approach Section -->
-    <section id="approach" class="approach">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Therapeutic Approach</h2>
-                <p>Evidence-based methods tailored to your unique journey</p>
-            </div>
-            <div class="approach-grid">
-                <div class="approach-item">
-                    <div>Cognitive Behavioral Therapy</div>
-                    <div class="approach-overlay">
-                        <h3>Cognitive Behavioral Therapy</h3>
-                        <p>Identify and change negative thought patterns and behaviors</p>
-                    </div>
-                </div>
-                <div class="approach-item">
-                    <div>Mindfulness Practices</div>
-                    <div class="approach-overlay">
-                        <h3>Mindfulness Practices</h3>
-                        <p>Develop present-moment awareness and emotional regulation</p>
-                    </div>
-                </div>
-                <div class="approach-item">
-                    <div>Person-Centered Therapy</div>
-                    <div class="approach-overlay">
-                        <h3>Person-Centered Therapy</h3>
-                        <p>Empowering you to find your own solutions with guidance</p>
-                    </div>
+                    <div class="service-icon">💑</div>
+                    <h3>Couples Therapy</h3>
+                    <p>Strengthen your relationship and develop healthier patterns of interaction.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact">
         <div class="container">
             <div class="section-title">
-                <h2>Get In Touch</h2>
-                <p>Take the first step toward healing and personal growth</p>
+                <h2>Contact Us</h2>
+                <p>Ready to begin your healing journey? Reach out to schedule your first session.</p>
             </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <i class="fas fa-envelope"></i>
-                        <h3>Email</h3>
-                        <p>contact@compassionateconnections.com</p>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your name">
                     </div>
-                    <div class="contact-card">
-                        <i class="fas fa-phone"></i>
-                        <h3>Phone</h3>
-                        <p>+1 (555) 123-HEAL</p>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email">
                     </div>
-                    <div class="contact-card">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>Location</h3>
-                        <p>123 Healing Street, Suite 101<br>Serenity, CA 90210</p>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" class="form-control" placeholder="Tell us how we can help you"></textarea>
                     </div>
-                    <div class="contact-card">
-                        <i class="fas fa-clock"></i>
-                        <h3>Office Hours</h3>
-                        <p>Monday - Friday: 9am - 6pm<br>Saturday: 10am - 2pm</p>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Your Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" class="form-control" placeholder="your.email@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" class="form-control" placeholder="(555) 123-4567">
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Service Interested In</label>
-                            <select id="service" class="form-control">
-                                <option value="">Select a service</option>
-                                <option value="individual">Individual Therapy</option>
-                                <option value="couples">Couples Counseling</option>
-                                <option value="anxiety">Anxiety & Depression</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" class="form-control" placeholder="Tell me how I can help you..."></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <div class="footer-logo">Compassionate Connections</div>
-                    <p>Professional Therapy Services for Healing and Growth</p>
-                </div>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
+        <div class="container footer-content">
+            <div class="logo">Serenity Therapy</div>
+            <div class="social-links">
+                <a href="#">📘</a>
+                <a href="#">🐦</a>
+                <a href="#">📷</a>
+                <a href="#">💼</a>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 Compassionate Connections Counselling. All rights reserved. | <a href="#" style="color: #aaa;">Privacy Policy</a></p>
-            </div>
+            <p class="copyright">&copy; 2023 Serenity Therapy Center. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        // Simple script to handle smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Function to load images with fallback
-        function loadImageWithFallback(imgElement, imageUrl, fallbackText) {
-            const img = new Image();
-            img.onload = function() {
-                imgElement.innerHTML = `<img src="${imageUrl}" alt="${fallbackText}">`;
-            };
-            img.onerror = function() {
-                // Keep the fallback content if image fails to load
-                console.log(`Image failed to load: ${imageUrl}`);
-            };
-            img.src = imageUrl;
-        }
-
-        // Load images after page load
-        document.addEventListener('DOMContentLoaded', function() {
-            // Hero image
-            const heroImage = document.querySelector('.hero-image');
-            loadImageWithFallback(heroImage, 'https://images.unsplash.com/photo-1576097449797-4c9aef6b739c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80', 'Peaceful Therapy Environment');
-            
-            // About image
-            const aboutImage = document.querySelector('.about-image');
-            loadImageWithFallback(aboutImage, 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80', 'Therapist Portrait');
-            
-            // Approach images
-            const approachItems = document.querySelectorAll('.approach-item');
-            const approachImages = [
-                'https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80',
-                'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1120&q=80',
-                'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'
-            ];
-            
-            approachItems.forEach((item, index) => {
-                if (index < approachImages.length) {
-                    loadImageWithFallback(item, approachImages[index], `Therapy Approach ${index + 1}`);
-                }
-            });
-        });
-    </script>
 </body>
 </html>
