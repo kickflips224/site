@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Morgan | Creative Developer</title>
+    <title>Compassionate Connections Counselling | Professional Therapy Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,11 +14,12 @@
         }
 
         :root {
-            --primary: #6C63FF;
-            --secondary: #4A44C6;
-            --dark: #2A2D3E;
-            --light: #F7F9FC;
-            --accent: #FF6584;
+            --primary: #4A7B9D;
+            --secondary: #3A6B8A;
+            --accent: #F4A261;
+            --dark: #2A3D45;
+            --light: #F8F9FA;
+            --neutral: #E9ECEF;
         }
 
         body {
@@ -118,13 +119,21 @@
             transform: translateY(-3px);
         }
 
+        .btn-accent {
+            background-color: var(--accent);
+        }
+
+        .btn-accent:hover {
+            background-color: #e68a4d;
+        }
+
         .hero-image {
             flex: 1;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             height: 400px;
-            background: linear-gradient(45deg, #6C63FF, #4A44C6);
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
             display: flex;
             align-items: center;
             justify-content: center;
@@ -181,7 +190,7 @@
             border-radius: 10px;
             overflow: hidden;
             height: 400px;
-            background: linear-gradient(45deg, #FF6584, #6C63FF);
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
             display: flex;
             align-items: center;
             justify-content: center;
@@ -195,73 +204,74 @@
             object-fit: cover;
         }
 
-        /* Skills Section */
-        .skills-container {
+        /* Services Section */
+        .services-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
-        .skill-card {
+        .service-card {
             background: white;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: transform 0.3s;
+            text-align: center;
         }
 
-        .skill-card:hover {
+        .service-card:hover {
             transform: translateY(-10px);
         }
 
-        .skill-card i {
+        .service-card i {
             font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 20px;
         }
 
-        .skill-card h3 {
+        .service-card h3 {
             margin-bottom: 15px;
         }
 
-        /* Portfolio Section */
-        .portfolio-grid {
+        /* Approach Section */
+        .approach-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 30px;
         }
 
-        .portfolio-item {
+        .approach-item {
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             position: relative;
             height: 250px;
-            background: linear-gradient(45deg, #4A44C6, #6C63FF);
+            background: linear-gradient(45deg, var(--secondary), var(--primary));
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
         }
 
-        .portfolio-item img {
+        .approach-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
         }
 
-        .portfolio-item:hover img {
+        .approach-item:hover img {
             transform: scale(1.1);
         }
 
-        .portfolio-overlay {
+        .approach-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(108, 99, 255, 0.9);
+            background: rgba(74, 123, 157, 0.9);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -273,7 +283,7 @@
             color: white;
         }
 
-        .portfolio-item:hover .portfolio-overlay {
+        .approach-item:hover .approach-overlay {
             opacity: 1;
         }
 
@@ -399,12 +409,12 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Alex Morgan</div>
+                <div class="logo">Compassionate Connections</div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#approach">Approach</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -415,13 +425,14 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Creative Developer & UI/UX Designer</h1>
-                <p>I create beautiful, functional websites and applications that help businesses grow and succeed in the digital world.</p>
-                <a href="#portfolio" class="btn">View My Work</a>
+                <h1>Find Your Path to Healing and Growth</h1>
+                <p>At Compassionate Connections Counselling, we provide a safe, supportive environment to help you navigate life's challenges and discover your inner strength.</p>
+                <a href="#contact" class="btn">Schedule a Session</a>
+                <a href="#services" class="btn btn-accent" style="margin-left: 15px;">Our Services</a>
             </div>
             <div class="hero-image">
                 <!-- Fallback content if image doesn't load -->
-                <div>Image: Developer Workspace</div>
+                <div>Image: Peaceful Therapy Environment</div>
             </div>
         </div>
     </section>
@@ -430,78 +441,78 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Me</h2>
-                <p>Learn more about my background, skills, and passion for technology</p>
+                <h2>About Our Practice</h2>
+                <p>Creating a safe space for healing and personal growth</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Hello! I'm Alex Morgan</h3>
-                    <p>I'm a passionate full-stack developer with over 5 years of experience creating digital solutions for businesses of all sizes. My expertise includes front-end development, UI/UX design, and back-end systems.</p>
-                    <p>I believe in creating products that are not only visually appealing but also highly functional and user-friendly. My approach combines technical expertise with creative problem-solving to deliver exceptional results.</p>
-                    <p>When I'm not coding, you can find me hiking, reading tech blogs, or experimenting with new frameworks and tools.</p>
-                    <a href="#contact" class="btn" style="margin-top: 20px;">Get In Touch</a>
+                    <h3>Welcome to Compassionate Connections</h3>
+                    <p>I'm Dr. Sarah Johnson, a licensed therapist with over 10 years of experience helping individuals and couples navigate life's challenges. My approach is rooted in empathy, respect, and the belief that every person has the capacity for growth and healing.</p>
+                    <p>I specialize in anxiety, depression, relationship issues, and trauma recovery. My practice combines evidence-based techniques with a personalized approach to meet your unique needs and goals.</p>
+                    <p>I believe that the therapeutic relationship is the foundation for meaningful change, and I'm committed to creating a non-judgmental space where you can explore your thoughts and feelings openly.</p>
+                    <a href="#contact" class="btn" style="margin-top: 20px;">Book a Consultation</a>
                 </div>
                 <div class="about-image">
-                    <div>Image: Professional Portrait</div>
+                    <div>Image: Therapist Portrait</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <!-- Services Section -->
+    <section id="services" class="services">
         <div class="container">
             <div class="section-title">
-                <h2>My Skills</h2>
-                <p>I specialize in these technologies and methodologies</p>
+                <h2>Our Services</h2>
+                <p>Professional therapy tailored to your unique needs</p>
             </div>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Frontend Development</h3>
-                    <p>HTML5, CSS3, JavaScript, React, Vue.js, responsive design, and cross-browser compatibility.</p>
+            <div class="services-container">
+                <div class="service-card">
+                    <i class="fas fa-user-friends"></i>
+                    <h3>Individual Therapy</h3>
+                    <p>One-on-one sessions focused on your personal growth, healing, and developing coping strategies for life's challenges.</p>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-server"></i>
-                    <h3>Backend Development</h3>
-                    <p>Node.js, Express, Python, Django, REST APIs, database design, and server management.</p>
+                <div class="service-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Couples Counseling</h3>
+                    <p>Strengthen your relationship through improved communication, conflict resolution, and rebuilding trust and intimacy.</p>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-palette"></i>
-                    <h3>UI/UX Design</h3>
-                    <p>User research, wireframing, prototyping, visual design, and usability testing.</p>
+                <div class="service-card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Anxiety & Depression</h3>
+                    <p>Evidence-based approaches to manage symptoms, develop resilience, and restore balance to your life.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <!-- Approach Section -->
+    <section id="approach" class="approach">
         <div class="container">
             <div class="section-title">
-                <h2>My Portfolio</h2>
-                <p>Check out some of my recent projects</p>
+                <h2>Our Therapeutic Approach</h2>
+                <p>Evidence-based methods tailored to your unique journey</p>
             </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div>E-Commerce Website Project</div>
-                    <div class="portfolio-overlay">
-                        <h3>E-Commerce Website</h3>
-                        <p>Full-stack development for an online retail store</p>
+            <div class="approach-grid">
+                <div class="approach-item">
+                    <div>Cognitive Behavioral Therapy</div>
+                    <div class="approach-overlay">
+                        <h3>Cognitive Behavioral Therapy</h3>
+                        <p>Identify and change negative thought patterns and behaviors</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div>Mobile Banking App Project</div>
-                    <div class="portfolio-overlay">
-                        <h3>Mobile Banking App</h3>
-                        <p>UI/UX design and frontend development</p>
+                <div class="approach-item">
+                    <div>Mindfulness Practices</div>
+                    <div class="approach-overlay">
+                        <h3>Mindfulness Practices</h3>
+                        <p>Develop present-moment awareness and emotional regulation</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div>Analytics Dashboard Project</div>
-                    <div class="portfolio-overlay">
-                        <h3>Analytics Dashboard</h3>
-                        <p>Data visualization and reporting system</p>
+                <div class="approach-item">
+                    <div>Person-Centered Therapy</div>
+                    <div class="approach-overlay">
+                        <h3>Person-Centered Therapy</h3>
+                        <p>Empowering you to find your own solutions with guidance</p>
                     </div>
                 </div>
             </div>
@@ -513,43 +524,58 @@
         <div class="container">
             <div class="section-title">
                 <h2>Get In Touch</h2>
-                <p>Have a project in mind? Let's discuss how we can work together</p>
+                <p>Take the first step toward healing and personal growth</p>
             </div>
             <div class="contact-container">
                 <div class="contact-info">
                     <div class="contact-card">
                         <i class="fas fa-envelope"></i>
                         <h3>Email</h3>
-                        <p>alex@example.com</p>
+                        <p>contact@compassionateconnections.com</p>
                     </div>
                     <div class="contact-card">
                         <i class="fas fa-phone"></i>
                         <h3>Phone</h3>
-                        <p>+1 (123) 456-7890</p>
+                        <p>+1 (555) 123-HEAL</p>
                     </div>
                     <div class="contact-card">
                         <i class="fas fa-map-marker-alt"></i>
                         <h3>Location</h3>
-                        <p>San Francisco, CA</p>
+                        <p>123 Healing Street, Suite 101<br>Serenity, CA 90210</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Office Hours</h3>
+                        <p>Monday - Friday: 9am - 6pm<br>Saturday: 10am - 2pm</p>
                     </div>
                 </div>
                 <div class="contact-form">
                     <form>
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="John Doe">
+                            <input type="text" id="name" class="form-control" placeholder="Your Name">
                         </div>
                         <div class="form-group">
                             <label for="email">Your Email</label>
-                            <input type="email" id="email" class="form-control" placeholder="john@example.com">
+                            <input type="email" id="email" class="form-control" placeholder="your.email@example.com">
                         </div>
                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" class="form-control" placeholder="Project Inquiry">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" class="form-control">
+                                <option value="">Select a service</option>
+                                <option value="individual">Individual Therapy</option>
+                                <option value="couples">Couples Counseling</option>
+                                <option value="anxiety">Anxiety & Depression</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="message">Your Message</label>
-                            <textarea id="message" class="form-control" placeholder="Tell me about your project..."></textarea>
+                            <textarea id="message" class="form-control" placeholder="Tell me how I can help you..."></textarea>
                         </div>
                         <button type="submit" class="btn">Send Message</button>
                     </form>
@@ -563,18 +589,18 @@
         <div class="container">
             <div class="footer-content">
                 <div>
-                    <div class="footer-logo">Alex Morgan</div>
-                    <p>Creative Developer & UI/UX Designer</p>
+                    <div class="footer-logo">Compassionate Connections</div>
+                    <p>Professional Therapy Services for Healing and Growth</p>
                 </div>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Alex Morgan. All rights reserved.</p>
+                <p>&copy; 2023 Compassionate Connections Counselling. All rights reserved. | <a href="#" style="color: #aaa;">Privacy Policy</a></p>
             </div>
         </div>
     </footer>
@@ -607,23 +633,23 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Hero image
             const heroImage = document.querySelector('.hero-image');
-            loadImageWithFallback(heroImage, 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80', 'Developer Workspace');
+            loadImageWithFallback(heroImage, 'https://images.unsplash.com/photo-1576097449797-4c9aef6b739c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80', 'Peaceful Therapy Environment');
             
             // About image
             const aboutImage = document.querySelector('.about-image');
-            loadImageWithFallback(aboutImage, 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80', 'Professional Portrait');
+            loadImageWithFallback(aboutImage, 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80', 'Therapist Portrait');
             
-            // Portfolio images
-            const portfolioItems = document.querySelectorAll('.portfolio-item');
-            const portfolioImages = [
-                'https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80',
-                'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-                'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'
+            // Approach images
+            const approachItems = document.querySelectorAll('.approach-item');
+            const approachImages = [
+                'https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80',
+                'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1120&q=80',
+                'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'
             ];
             
-            portfolioItems.forEach((item, index) => {
-                if (index < portfolioImages.length) {
-                    loadImageWithFallback(item, portfolioImages[index], `Portfolio Project ${index + 1}`);
+            approachItems.forEach((item, index) => {
+                if (index < approachImages.length) {
+                    loadImageWithFallback(item, approachImages[index], `Therapy Approach ${index + 1}`);
                 }
             });
         });
