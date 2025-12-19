@@ -65,12 +65,21 @@
         }
 
         .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #F5F1E6;
-            letter-spacing: -0.5px;
-        }
+    display: flex;         /* Sits image and text side-by-side */
+    align-items: center;   /* Aligns them vertically in the middle */
+    gap: 15px;             /* Adds space between the image and the text */
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #F5F1E6;
+    letter-spacing: -0.5px;
+}
+
+.logo-img {
+    height: 50px;          /* Adjust this to make your logo bigger or smaller */
+    width: auto;
+    display: block;
+}
 
         .nav-links {
             display: flex;
@@ -538,8 +547,9 @@
         <div class="container">
             <nav>
                 <div class="logo">
-        <img src="Logo.png" alt="Compassionate Connections Counseling Logo" class="logo-img">
-    </div>
+    <img src="Logo.png" alt="Logo" class="logo-img">
+    <span>Compassionate Connections Counseling</span>
+</div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
